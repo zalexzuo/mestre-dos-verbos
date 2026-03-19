@@ -32,8 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   recordBtn.addEventListener("click", () => {
-    const verb = document.getElementById("verb-input").value || "(Sem verbo)";
-    const answer = document.getElementById("answer-input").value;
+    const verbInput = document.getElementById("verb-input");
+    const answerInput = document.getElementById("answer-input");
+
+    const verb = verbInput.value || "(Sem verbo)";
+    const answer = answerInput.value || "(Vazio)";
 
     if (!currentPrompt) {
       alert("Gere um desafio primeiro!");
@@ -53,9 +56,31 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div>(${currentPrompt})</div>
           <i>Resp: ${answer}</i>
+          <div class="status-btns">
+            <button class="s-btn c" onclick="updateItemStatus(this, 'c')">✓ Certo</button>
+            <button class="s-btn e" onclick="updateItemStatus(this, 'e')">✗ Errado</button>
+          </div>
       `;
 
     historyList.prepend(newItem);
     historyContainer.scrollTop = 0;
+
+    answerInput.value = "";
+    answerInput.focus();
   });
 });
+
+window.updateItemStatus = function (btn, status) {
+  const item = btn.closest(".history-item");
+  const buttons = item.querySelectorAll(".s-btn");
+
+  item.classList.remove("is-correct", "is-incorrect");
+  buttons.forEach((b) => b.classList.remove("active"));
+
+  if (status === "c") {
+    item.classList.add("is-correct");
+  } else {
+    item.classList.add("is-incorrect");
+  }
+  btn.classList.add("active");
+};

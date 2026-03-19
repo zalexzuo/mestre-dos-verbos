@@ -123,16 +123,17 @@ body {
   border-radius: 12px;
   padding: 10px;
   border: 1px solid #e2e8f0;
-  max-height: 150px;
+  max-height: 250px;
   overflow-y: auto;
   margin-bottom: 2rem;
 }
 .history-item {
   font-size: 0.85rem;
-  padding: 8px;
+  padding: 12px;
   border-bottom: 1px solid #edf2f7;
   color: #4a5568;
   line-height: 1.4;
+  transition: background-color 0.3s ease;
 }
 .history-item:last-child {
   border-bottom: none;
@@ -142,6 +143,45 @@ body {
 }
 .history-item i {
   color: #38a169;
+}
+
+.history-item.is-correct {
+  background-color: #f0fff4 !important;
+  border-left: 5px solid #38a169;
+}
+.history-item.is-incorrect {
+  background-color: #fff5f5 !important;
+  border-left: 5px solid #e53e3e;
+}
+
+.status-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+.s-btn {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  background: white;
+  color: #718096;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.s-btn.c:hover,
+.s-btn.c.active {
+  background-color: #38a169;
+  color: white;
+  border-color: #38a169;
+}
+.s-btn.e:hover,
+.s-btn.e.active {
+  background-color: #e53e3e;
+  color: white;
+  border-color: #e53e3e;
 }
 
 .settings-section h3 {
