@@ -1,103 +1,255 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
-</head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="pt-BR"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Mestre dos Verbos - Conjugação Completa&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="style.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="app-title"&gt;Mestre dos Verbos&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="app-subtitle"&gt;Treino de Conjugação Completa&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="verb-input"&gt;Verbo para praticar:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="verb-input" placeholder="Ex: Estar, Ter, Falar..."&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="display-area"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="display-text"&gt;Clique no botão para gerar o desafio&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn-generate" id="generateBtn"&gt;🎲 Gerar Desafio&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="settings-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Selecione as Pessoas&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group person-group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;&lt;input type="checkbox" name="person" value="Eu" checked&gt; Eu&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;&lt;input type="checkbox" name="person" value="Tu"&gt; Tu&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;&lt;input type="checkbox" name="person" value="Você / Ele / Ela / A gente" checked&gt; Você / Ele / Ela / A gente&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;&lt;input type="checkbox" name="person" value="Nós" checked&gt; Nós&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;&lt;input type="checkbox" name="person" value="Vós"&gt; Vós&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;&lt;input type="checkbox" name="person" value="Vocês / Eles / Elas" checked&gt; Vocês / Eles / Elas&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="section-divider"&gt;Configuração de Tempos (Modos)&lt;/h3&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mode-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Modo Indicativo&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="checkbox-group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Presente (Ind.)" checked&gt; Presente&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Pretérito Perfeito (Ind.)" checked&gt; Pretérito Perfeito&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Pretérito Imperfeito (Ind.)"&gt; Pretérito Imperfeito&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Pretérito Mais-que-perfeito (Ind.)"&gt; Pretérito Mais-que-perfeito&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Futuro do Presente (Ind.)"&gt; Futuro do Presente&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Futuro do Pretérito (Ind.)"&gt; Futuro do Pretérito&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;hr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Pret. Perfeito Composto (Ind.)"&gt; Pret. Perfeito Composto&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Pret. M-q-P Composto (Ind.)"&gt; Pret. M-q-P Composto&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Futuro do Presente Comp. (Ind.)"&gt; Futuro do Presente Comp.&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Futuro do Pretérito Comp. (Ind.)"&gt; Futuro do Pretérito Comp.&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mode-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Modo Subjuntivo&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="checkbox-group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Presente (Subj.)"&gt; Presente&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Pretérito Imperfeito (Subj.)"&gt; Pretérito Imperfeito&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Futuro (Subj.)"&gt; Futuro&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;hr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Pret. Perfeito Comp. (Subj.)"&gt; Pret. Perfeito Comp.&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Pret. M-q-P Comp. (Subj.)"&gt; Pret. M-q-P Comp.&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Futuro Composto (Subj.)"&gt; Futuro Composto&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mode-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Formas Nominais &amp; Imperativo&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="checkbox-group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Infinitivo Impessoal"&gt; Infinitivo Impessoal&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Gerúndio"&gt; Gerúndio&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Particípio Passado"&gt; Particípio Passado&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;hr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Infinitivo Pessoal"&gt; Infinitivo Pessoal&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="compound"&gt;&lt;input type="checkbox" name="tense" value="Infinitivo Pessoal Composto"&gt; Infinitivo Pessoal Comp.&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Imperativo Afirmativo"&gt; Imperativo Afirmativo&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;&lt;input type="checkbox" name="tense" value="Imperativo Negativo"&gt; Imperativo Negativo&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script src="script.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mestre dos Verbos - Conjugação Completa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="app-title">Mestre dos Verbos</h1>
+      <p class="app-subtitle">Treino de Conjugação Completa</p>
+
+      <div class="input-section">
+        <label for="verb-input">Verbo para praticar:</label>
+        <input
+          type="text"
+          id="verb-input"
+          placeholder="Ex: Estar, Ter, Falar..."
+        />
+      </div>
+
+      <div id="display-area">
+        <p id="display-text">Clique no botão para gerar o desafio</p>
+      </div>
+
+      <button class="btn-generate" id="generateBtn">🎲 Gerar Desafio</button>
+
+      <div class="settings-section">
+        <h3>Selecione as Pessoas</h3>
+        <div class="checkbox-group person-group">
+          <label
+            ><input type="checkbox" name="person" value="Eu" checked />
+            Eu</label
+          >
+          <label><input type="checkbox" name="person" value="Tu" /> Tu</label>
+          <label
+            ><input
+              type="checkbox"
+              name="person"
+              value="Você / Ele / Ela / A gente"
+              checked
+            />
+            Você / Ele / Ela / A gente</label
+          >
+          <label
+            ><input type="checkbox" name="person" value="Nós" checked />
+            Nós</label
+          >
+          <label><input type="checkbox" name="person" value="Vós" /> Vós</label>
+          <label
+            ><input
+              type="checkbox"
+              name="person"
+              value="Vocês / Eles / Elas"
+              checked
+            />
+            Vocês / Eles / Elas</label
+          >
+        </div>
+
+        <h3 class="section-divider">Configuração de Tempos (Modos)</h3>
+
+        <div class="mode-container">
+          <h4>Modo Indicativo</h4>
+          <div class="checkbox-group">
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Presente (Ind.)"
+                checked
+              />
+              Presente</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pretérito Perfeito (Ind.)"
+                checked
+              />
+              Pretérito Perfeito</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pretérito Imperfeito (Ind.)"
+              />
+              Pretérito Imperfeito</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pretérito Mais-que-perfeito (Ind.)"
+              />
+              Pretérito Mais-que-perfeito</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Futuro do Presente (Ind.)"
+              />
+              Futuro do Presente</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Futuro do Pretérito (Ind.)"
+              />
+              Futuro do Pretérito</label
+            >
+            <hr />
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pret. Perfeito Composto (Ind.)"
+              />
+              Pret. Perfeito Composto</label
+            >
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pret. M-q-P Composto (Ind.)"
+              />
+              Pret. M-q-P Composto</label
+            >
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Futuro do Presente Comp. (Ind.)"
+              />
+              Futuro do Presente Comp.</label
+            >
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Futuro do Pretérito Comp. (Ind.)"
+              />
+              Futuro do Pretérito Comp.</label
+            >
+          </div>
+        </div>
+
+        <div class="mode-container">
+          <h4>Modo Subjuntivo</h4>
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" name="tense" value="Presente (Subj.)" />
+              Presente</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pretérito Imperfeito (Subj.)"
+              />
+              Pretérito Imperfeito</label
+            >
+            <label
+              ><input type="checkbox" name="tense" value="Futuro (Subj.)" />
+              Futuro</label
+            >
+            <hr />
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pret. Perfeito Comp. (Subj.)"
+              />
+              Pret. Perfeito Comp.</label
+            >
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Pret. M-q-P Comp. (Subj.)"
+              />
+              Pret. M-q-P Comp.</label
+            >
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Futuro Composto (Subj.)"
+              />
+              Futuro Composto</label
+            >
+          </div>
+        </div>
+
+        <div class="mode-container">
+          <h4>Formas Nominais & Imperativo</h4>
+          <div class="checkbox-group">
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Infinitivo Impessoal"
+              />
+              Infinitivo Impessoal</label
+            >
+            <label
+              ><input type="checkbox" name="tense" value="Gerúndio" />
+              Gerúndio</label
+            >
+            <label
+              ><input type="checkbox" name="tense" value="Particípio Passado" />
+              Particípio Passado</label
+            >
+            <hr />
+            <label
+              ><input type="checkbox" name="tense" value="Infinitivo Pessoal" />
+              Infinitivo Pessoal</label
+            >
+            <label class="compound"
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Infinitivo Pessoal Composto"
+              />
+              Infinitivo Pessoal Comp.</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Imperativo Afirmativo"
+              />
+              Imperativo Afirmativo</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Imperativo Negativo"
+              />
+              Imperativo Negativo</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
