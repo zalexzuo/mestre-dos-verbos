@@ -16,7 +16,7 @@
         <input
           type="text"
           id="verb-input"
-          placeholder="Ex: Estar, Ter, Falar..."
+          placeholder="Ex: Treinar, Investir, Falar..."
         />
       </div>
 
@@ -26,8 +26,23 @@
 
       <button class="btn-generate" id="generateBtn">🎲 Gerar Desafio</button>
 
+      <div class="answer-section">
+        <input
+          type="text"
+          id="answer-input"
+          placeholder="Digite sua resposta aqui..."
+        />
+        <button id="recordBtn">Salvar Resposta</button>
+      </div>
+
+      <h4 class="history-title">Histórico de Prática</h4>
+      <div class="history-container" id="history-container">
+        <div id="history-list"></div>
+      </div>
+
       <div class="settings-section">
         <h3>Selecione as Pessoas</h3>
+        <p class="section-instruction">Selecione as pessoas para o treino:</p>
         <div class="checkbox-group person-group">
           <label
             ><input type="checkbox" name="person" value="Eu" checked />
@@ -59,7 +74,10 @@
           >
         </div>
 
-        <h3 class="section-divider">Configuração de Tempos (Modos)</h3>
+        <h3 class="section-divider">Configuração de Tempos</h3>
+        <p class="section-instruction">
+          Selecione os tempos verbais para incluir:
+        </p>
 
         <div class="mode-container">
           <h4>Modo Indicativo</h4>
@@ -87,6 +105,7 @@
                 type="checkbox"
                 name="tense"
                 value="Pretérito Imperfeito (Ind.)"
+                checked
               />
               Pretérito Imperfeito</label
             >
@@ -209,25 +228,22 @@
               Infinitivo Impessoal</label
             >
             <label
-              ><input type="checkbox" name="tense" value="Gerúndio" />
+              ><input type="checkbox" name="tense" value="Gerúndio" checked />
               Gerúndio</label
             >
             <label
-              ><input type="checkbox" name="tense" value="Particípio Passado" />
+              ><input
+                type="checkbox"
+                name="tense"
+                value="Particípio Passado"
+                checked
+              />
               Particípio Passado</label
             >
             <hr />
             <label
               ><input type="checkbox" name="tense" value="Infinitivo Pessoal" />
               Infinitivo Pessoal</label
-            >
-            <label class="compound"
-              ><input
-                type="checkbox"
-                name="tense"
-                value="Infinitivo Pessoal Composto"
-              />
-              Infinitivo Pessoal Comp.</label
             >
             <label
               ><input

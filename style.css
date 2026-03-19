@@ -30,8 +30,9 @@ body {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
+
 .input-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .input-section label {
   display: block;
@@ -48,24 +49,25 @@ body {
   font-size: 1rem;
   box-sizing: border-box;
 }
+
 #display-area {
   background: #ebf8ff;
   padding: 1.5rem;
   border-radius: 15px;
-  margin-bottom: 1.5rem;
-  min-height: 100px;
+  margin-bottom: 1rem;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #bee3f8;
 }
 #display-text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #2b6cb0;
   text-align: center;
-  line-height: 1.5;
 }
+
 .btn-generate {
   background: #38a169;
   color: white;
@@ -77,30 +79,96 @@ body {
   cursor: pointer;
   transition: 0.2s;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .btn-generate:hover {
   background: #2f855a;
-  transform: translateY(-1px);
 }
+
+.answer-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+#answer-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+#recordBtn {
+  background: #4a5568;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+#recordBtn:hover {
+  background: #2d3748;
+}
+
+.history-title {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 1.5rem 0 0.5rem 0;
+  font-weight: bold;
+}
+.history-container {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+}
+.history-item {
+  font-size: 0.85rem;
+  padding: 8px;
+  border-bottom: 1px solid #edf2f7;
+  color: #4a5568;
+  line-height: 1.4;
+}
+.history-item:last-child {
+  border-bottom: none;
+}
+.history-item b {
+  color: #2d3748;
+}
+.history-item i {
+  color: #38a169;
+}
+
 .settings-section h3 {
   font-size: 1rem;
   color: #2d3748;
   border-left: 4px solid #38a169;
   padding-left: 10px;
-  margin-bottom: 15px;
+  margin-top: 1.5rem;
+  margin-bottom: 5px;
 }
+.section-instruction {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-bottom: 12px;
+}
+
 .mode-container {
   background: #f7fafc;
   padding: 15px;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-top: 10px;
   border: 1px solid #edf2f7;
 }
 .mode-container h4 {
   margin: 0 0 10px 0;
-  font-size: 0.9rem;
-  color: #4a5568;
+  font-size: 0.8rem;
+  color: #718096;
   text-transform: uppercase;
 }
 .checkbox-group {
@@ -112,12 +180,12 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #4a5568;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 hr {
   border: 0;
